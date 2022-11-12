@@ -1,0 +1,18 @@
+{
+    "Towns": [
+        {
+            "City": "Baltimore",
+            "State": "MD"
+        },
+        {
+            "City": "Jacksonville",
+            "State": "FL"
+        }
+    ],
+
+    "Person": {
+        "Name": "Ryan",
+        "Age": 38,
+        "Hometown": "Baltimore"
+    }
+}
