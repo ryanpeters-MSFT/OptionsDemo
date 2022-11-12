@@ -5,7 +5,12 @@ using Microsoft.Extensions.Options;
 
 var configValues = new Dictionary<string, string>()
 {
-    ["credentials:name"] = "ryan"
+    ["credentials:name"] = "ryan",
+
+    // when uncommented, will provide data for IOptions<Person> instance
+    // ["Person:Name"] = "Jane",
+    // ["Person:Age"] = "25",
+    // ["Person:Hometown"] = "New York"
 };
 
 var builder = Host.CreateDefaultBuilder(args)
