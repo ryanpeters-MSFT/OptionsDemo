@@ -1,17 +1,21 @@
 {
-    "Towns": [
-        {
-            "City": "Baltimore",
-            "State": "MD"
-        },
-        {
-            "City": "Jacksonville",
-            "State": "FL"
-        }
-    ],
-    "Person": {
-        "Name": "Ryan",
-        "Age": 38,
-        "Hometown": "Baltimore"
+    "PaymentProcessing": {
+        "Enable": true,
+        "MaxInstances": 16,
+        "EnabledSets": [2, 4, 9, 12],
+        "SetConfig": [
+            {
+                "Id": 1,
+                "Name": "Payments-A",
+                "Timeout": 80,
+                "QueuingEnabled": false
+            },
+            {
+                "Id": 2,
+                "Name": "Payments-B",
+                "Timeout": 120,
+                "QueuingEnabled": true
+            }
+        ]
     }
 }

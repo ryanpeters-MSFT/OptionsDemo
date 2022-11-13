@@ -25,7 +25,7 @@ var builder = Host.CreateDefaultBuilder(args)
     }).ConfigureServices((builder, services) =>
     {
         // configure IOptions<Person>
-        services.Configure<Person>(builder.Configuration.GetSection("Person"));
+        services.Configure<PaymentProcessing>(builder.Configuration.GetSection("PaymentProcessing"));
     });
 
 var app = builder.Build();
@@ -33,8 +33,8 @@ var app = builder.Build();
 var configuration = app.Services.GetService<IConfiguration>();
 
 Console.WriteLine($"Setting from memory: {configuration["credentials:name"]}");
-Console.WriteLine($"Setting from settings.json: {configuration["Towns:1:City"]}");
+Console.WriteLine($"Setting from settings.json: {configuration["PaymentProcessing:SetConfig:0:Name"]}");
 
-var options = app.Services.GetService<IOptions<Person>>();
+var paymentProcessingSettings = app.Services.GetService<IOptions<PaymentProcessing>>();
 
-Console.WriteLine($"Settings from options: {options.Value.Name}");
+Console.WriteLine($"Setting from IOptions<PaymentProcessing>: {paymentProcessingSettings.Value.SetConfig[1].Name}");
