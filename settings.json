@@ -3,7 +3,7 @@
         "Enable": true,
         "MaxInstances": 16,
         "EnabledSets": [2, 4, 9, 12],
-        "SetConfig": [
+        "ConfigSettings": [
             {
                 "Id": 1,
                 "Name": "Payments-A",

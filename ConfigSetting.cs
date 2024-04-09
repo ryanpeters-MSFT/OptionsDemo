@@ -1,4 +1,4 @@
-public class SetConfig
+public class ConfigSetting
 {
     public int Id { get; set; }
     public string Name { get; set; }
